@@ -1,0 +1,84 @@
+pivot w srodku
+sredni czas dla posortowania 10 elementow to: 	1.2e-06
+pivot na poczatku
+sredni czas dla posortowania 10 elementow to: 	1.2e-06
+Mergesort - pivot w srodku
+sredni czas dla posortowania 10 elementow to: 	3.2e-06
+Mergesort - pivot na poczatku
+sredni czas dla posortowania 10 elementow to: 	4.8e-06
+Mergesort - pivot losowo
+sredni czas dla posortowania 10 elementow to: 	5e-06
+pivot w srodku
+sredni czas dla posortowania 100 elementow to: 	1.67e-05
+pivot na poczatku
+sredni czas dla posortowania 100 elementow to: 	1.58e-05
+Mergesort - pivot w srodku
+sredni czas dla posortowania 100 elementow to: 	5.66e-05
+Mergesort - pivot na poczatku
+sredni czas dla posortowania 100 elementow to: 	4.36e-05
+Mergesort - pivot losowo
+sredni czas dla posortowania 100 elementow to: 	4.32e-05
+pivot w srodku
+sredni czas dla posortowania 1000 elementow to: 	0.0003233
+pivot na poczatku
+sredni czas dla posortowania 1000 elementow to: 	0.0002687
+Mergesort - pivot w srodku
+sredni czas dla posortowania 1000 elementow to: 	0.0005351
+Mergesort - pivot na poczatku
+sredni czas dla posortowania 1000 elementow to: 	0.0002956
+Mergesort - pivot losowo
+sredni czas dla posortowania 1000 elementow to: 	0.0001748
+pivot w srodku
+sredni czas dla posortowania 10000 elementow to: 	0.0012619
+pivot na poczatku
+sredni czas dla posortowania 10000 elementow to: 	0.0012877
+Mergesort - pivot w srodku
+sredni czas dla posortowania 10000 elementow to: 	0.0021459
+Mergesort - pivot na poczatku
+sredni czas dla posortowania 10000 elementow to: 	0.0021485
+Mergesort - pivot losowo
+sredni czas dla posortowania 10000 elementow to: 	0.0021271
+pivot w srodku
+sredni czas dla posortowania 100000 elementow to: 	0.0150255
+pivot na poczatku
+sredni czas dla posortowania 100000 elementow to: 	0.0154789
+Mergesort - pivot w srodku
+sredni czas dla posortowania 100000 elementow to: 	0.0253992
+Mergesort - pivot na poczatku
+sredni czas dla posortowania 100000 elementow to: 	0.026133
+Mergesort - pivot losowo
+sredni czas dla posortowania 100000 elementow to: 	0.0265194
+pivot w srodku
+sredni czas dla posortowania 1000000 elementow to: 	0.17729
+pivot na poczatku
+sredni czas dla posortowania 1000000 elementow to: 	0.183869
+Mergesort - pivot w srodku
+sredni czas dla posortowania 1000000 elementow to: 	0.291698
+Mergesort - pivot na poczatku
+sredni czas dla posortowania 1000000 elementow to: 	0.300619
+Mergesort - pivot losowo
+sredni czas dla posortowania 1000000 elementow to: 	0.29284
+pivot w srodku
+sredni czas dla posortowania 10000000 elementow to: 	2.00974
+pivot na poczatku
+sredni czas dla posortowania 10000000 elementow to: 	2.05225
+Mergesort - pivot w srodku
+sredni czas dla posortowania 10000000 elementow to: 	3.32493
+Mergesort - pivot na poczatku
+sredni czas dla posortowania 10000000 elementow to: 	3.22013
+Mergesort - pivot losowo
+sredni czas dla posortowania 10000000 elementow to: 	3.15741
+pivot w srodku
+sredni czas dla posortowania 100000000 elementow to: 	21.3444
+pivot na poczatku
+sredni czas dla posortowania 100000000 elementow to: 	22.3292
+Mergesort - pivot w srodku
+sredni czas dla posortowania 100000000 elementow to: 	34.9111
+Mergesort - pivot na poczatku
+sredni czas dla posortowania 100000000 elementow to: 	36.7302
+Mergesort - pivot losowo
+sredni czas dla posortowania 100000000 elementow to: 	35.3955
+pivot w srodku
+sredni czas dla posortowania 1000000000 elementow to: 	234.586
+pivot na poczatku
+sredni czas dla posortowania 1000000000 elementow to: 	248.592
