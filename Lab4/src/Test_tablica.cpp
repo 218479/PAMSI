@@ -124,43 +124,6 @@ void Test_tablica::wykonaj_quicksort2(int *tab, int left, int right)
         wykonaj_quicksort2(tab,p,right);
     }
 }
-void Test_tablica::wykonaj_quicksort3(int *tab, int left, int right)
-{
-    int p, q, pivot;
-    p=left;
-    q=right;
-    pivot=tab[rand()%right];
-    do
-    {
-        while(tab[p]<pivot)
-        {
-            p++;
-        }
-        while(tab[q]>pivot)
-        {
-            q--;
-        }
-        if(p<=q)
-        {
-            int temp=tab[p];
-            tab[p]=tab[q];
-            tab[q]=temp;
-            p++;
-            q--;
-        }
-    }
-    while(p<=q);
-    if(q>left)
-    {
-        wykonaj_quicksort3(tab,left,q);
-    }
-    if(p<right)
-    {
-        wykonaj_quicksort3(tab,p,right);
-    }
-
-}
-
 
 void Test_tablica::merge(int *tab,int lewy, int pivot, int prawy)
 {
@@ -283,21 +246,8 @@ void Test_tablica::wykonaj()
     }
     cout<<"pivot na poczatku"<<endl;
     cout<<"sredni czas dla posortowania "<<rozmiar<<" elementow to: \t"<<stoper.get_suma()/10<<endl;
-
     stoper.przygotuj();
     for(int i=0; i<10; i++)
-    {
-        stoper.start_clock();
-        wykonaj_quicksort3(tab,0,rozmiar-1);
-        stoper.stop_clock();
-        stoper.get_time();
-        stoper.dodaj_sume();
-        reset();
-    }
-    cout<<"pivot losowo"<<endl;
-    cout<<"sredni czas dla posortowania "<<rozmiar<<" elementow to: \t"<<stoper.get_suma()/10<<endl;
-    stoper.przygotuj();
-    for(int i=0;i<10;i++)
     {
 
         stoper.start_clock();
@@ -309,8 +259,8 @@ void Test_tablica::wykonaj()
     }
     cout<<"Mergesort - pivot w srodku"<<endl;
     cout<<"sredni czas dla posortowania "<<rozmiar<<" elementow to: \t"<<stoper.get_suma()/10<<endl;
-        stoper.przygotuj();
-    for(int i=0;i<10;i++)
+    stoper.przygotuj();
+    for(int i=0; i<10; i++)
     {
 
         stoper.start_clock();
@@ -322,8 +272,8 @@ void Test_tablica::wykonaj()
     }
     cout<<"Mergesort - pivot na poczatku"<<endl;
     cout<<"sredni czas dla posortowania "<<rozmiar<<" elementow to: \t"<<stoper.get_suma()/10<<endl;
-        stoper.przygotuj();
-    for(int i=0;i<10;i++)
+    stoper.przygotuj();
+    for(int i=0; i<10; i++)
     {
 
         stoper.start_clock();

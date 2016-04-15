@@ -15,7 +15,6 @@ private:
     int rozmiar;
 
     void wykonaj_quicksort2(int *tab, int lewy, int prawy);
-    void wykonaj_quicksort3(int *tab, int lewy, int prawy);
     void wykonaj_quicksort1(int *tab, int lewy, int prawy);
 public:
     Test_tablica(){
