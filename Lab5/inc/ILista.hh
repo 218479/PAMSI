@@ -26,7 +26,7 @@ public:
     virtual void usun(int pozycja)=0;
     virtual string get(int nr)=0;
     virtual int get_size()=0;
-    virtual void przeszukaj(int a)=0;
+    virtual void przeszukaj(string a)=0;
 
 };
 

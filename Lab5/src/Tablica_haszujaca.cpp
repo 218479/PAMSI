@@ -1,36 +1,38 @@
 #include "Tablica_haszujaca.hh"
 
 
-int Tablica_haszujaca::znajdz(string klucz)
+void Tablica_haszujaca::znajdz(string klucz)
 {
-    string osoba=klucz;
     int x=haszuj(klucz);
-    for(int i=0;i<10;i++)
+    Tablica[x].przeszukaj(klucz);
+
+}
+
+void Tablica_haszujaca::wloz(string klucz)
+{
+    int x=haszuj(klucz);
+    Tablica[x].dodaj(klucz,0);
+
+}
+
+int Tablica_haszujaca::haszuj(string klucz)
+{
+    unsigned int kod=0;
+    unsigned int i=0;
+    unsigned int dlugosc=klucz.length();
+
+    for(i=0; i<dlugosc; i++)
     {
-        if(x=Tablica[i])
-        {
-            Lista Zmienna=Tablica[i];
-            Zmienna.przeszukaj(osoba);
-        }
+        kod=(klucz[i])+(kod<<6)+(kod<<16)-kod;
     }
+
+    return kod%rozmiar;
 }
 
-void Tablica_haszujaca::wloz(string klucz, int dana)
+void Tablica_haszujaca::reset()
 {
-    int x=klucz.haszuj();
-    for(int i=0;i<10;i++){
-        if(x=Tablica[i])
-        {
-            Lista Zmienna=Tablica[i];
-            Zmienna.push(osoba,0);
-        }
-    }
+    delete [] Tablica;
+    Tablica=new Lista[rozmiar];
 }
 
-void Tablica_haszujaca::usun(string klucz, int dana)
-{
-}
-void Tablica_haszujaca::haszuj()
-{
-}
 

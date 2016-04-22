@@ -5,27 +5,22 @@
 class Tablica_haszujaca: public ITablica_haszujaca
 {
 private:
-    Lista Tablica[10];
-    int kod;
+    Lista *Tablica;
+    int rozmiar;
 public:
-    Tablica_haszujaca();
-    virtual int znajdz(string klucz);
-    virtual void wloz(string klucz, int dana);
-    virtual void usun(string klucz, int dana);
-    virtual int haszuj(string klucz)
+    Tablica_haszujaca(int x)
     {
-        for(int i=0; i<klucz.length(); i++)
-        {
-            kod=kod+(int)klucz[i];
-        }
-        kod=kod%10;
-        return kod;
+        rozmiar=x;
+        Tablica=new Lista[rozmiar];
     }
+    ~Tablica_haszujaca(){
+    delete [] Tablica;
+    }
+    virtual void znajdz(string klucz);
+    virtual void wloz(string klucz);
+    virtual int haszuj(string klucz);
 
-    int operator [](string klucz)
-    {
-        return haszuj(klucz);
-    }
+    void reset();
 };
 
 #endif // TABLICA_HASZUJACA_HH

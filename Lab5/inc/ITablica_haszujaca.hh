@@ -9,10 +9,9 @@ class ITablica_haszujaca: public ITablica_asocjacyjna{
 private:
 
 public:
-    virtual int znajdz(string klucz)=0;
-    virtual void wloz(string klucz, int dana)=0;
-    virtual void usun(string klucz, int dana)=0;
-    virtual void haszuj()=0;
+    virtual void znajdz(string klucz)=0;
+    virtual void wloz(string klucz)=0;
+    virtual int haszuj(string klucz)=0;
 
 };
 #endif // ITABLICA_HASZUJACA_HH

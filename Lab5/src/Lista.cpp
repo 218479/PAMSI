@@ -135,16 +135,16 @@ int Lista::get_size()
 
 void Lista::przeszukaj(string a)
 {
-    int x=0;
+    int x=0,y=0;
     Element *tmp=poczatek;
     while(tmp)
     {
+        y++;
         if(tmp->dana==a)
         {
             x++;
         }
         tmp=tmp->nastepny;
     }
-    cout<<"Na liscie znajduje się "<<x<<" Takich wartosci"<<endl;
 
 }

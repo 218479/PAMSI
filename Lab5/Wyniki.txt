@@ -1,0 +1,40 @@
+Zapisywanie 10 elementow do tablicy o rozmiarze 10000 trwalo 7.9e-06
+Czas przeszukania tablicy o 10 liczbie elementow i 10000l. bucketow trwalo4.8e-06
+Zapisywanie 100 elementow do tablicy o rozmiarze 10000 trwalo 6.58e-05
+Czas przeszukania tablicy o 100 liczbie elementow i 10000l. bucketow trwalo1.5e-06
+Zapisywanie 1000 elementow do tablicy o rozmiarze 10000 trwalo 0.0020281
+Czas przeszukania tablicy o 1000 liczbie elementow i 10000l. bucketow trwalo9e-07
+Zapisywanie 10000 elementow do tablicy o rozmiarze 10000 trwalo 0.189707
+Czas przeszukania tablicy o 10000 liczbie elementow i 10000l. bucketow trwalo2.4e-06
+Zapisywanie 100000 elementow do tablicy o rozmiarze 10000 trwalo 21.3216
+Czas przeszukania tablicy o 100000 liczbie elementow i 10000l. bucketow trwalo4.7e-06
+Zapisywanie 10 elementow do tablicy o rozmiarze 1000 trwalo 1.5e-06
+Czas przeszukania tablicy o 10 liczbie elementow i 1000l. bucketow trwalo2e-07
+Zapisywanie 100 elementow do tablicy o rozmiarze 1000 trwalo 2.88e-05
+Czas przeszukania tablicy o 100 liczbie elementow i 1000l. bucketow trwalo6e-07
+Zapisywanie 1000 elementow do tablicy o rozmiarze 1000 trwalo 0.0019663
+Czas przeszukania tablicy o 1000 liczbie elementow i 1000l. bucketow trwalo9e-07
+Zapisywanie 10000 elementow do tablicy o rozmiarze 1000 trwalo 0.190176
+Czas przeszukania tablicy o 10000 liczbie elementow i 1000l. bucketow trwalo2.3e-06
+Zapisywanie 100000 elementow do tablicy o rozmiarze 1000 trwalo 22.0574
+Czas przeszukania tablicy o 100000 liczbie elementow i 1000l. bucketow trwalo5.2e-06
+Zapisywanie 10 elementow do tablicy o rozmiarze 100 trwalo 1.6e-06
+Czas przeszukania tablicy o 10 liczbie elementow i 100l. bucketow trwalo4e-07
+Zapisywanie 100 elementow do tablicy o rozmiarze 100 trwalo 3e-05
+Czas przeszukania tablicy o 100 liczbie elementow i 100l. bucketow trwalo1.3e-06
+Zapisywanie 1000 elementow do tablicy o rozmiarze 100 trwalo 0.0019774
+Czas przeszukania tablicy o 1000 liczbie elementow i 100l. bucketow trwalo1.2e-06
+Zapisywanie 10000 elementow do tablicy o rozmiarze 100 trwalo 0.189123
+Czas przeszukania tablicy o 10000 liczbie elementow i 100l. bucketow trwalo3.2e-06
+Zapisywanie 100000 elementow do tablicy o rozmiarze 100 trwalo 21.5856
+Czas przeszukania tablicy o 100000 liczbie elementow i 100l. bucketow trwalo9.3e-06
+Zapisywanie 10 elementow do tablicy o rozmiarze 10 trwalo 1.7e-06
+Czas przeszukania tablicy o 10 liczbie elementow i 10l. bucketow trwalo5e-07
+Zapisywanie 100 elementow do tablicy o rozmiarze 10 trwalo 3.32e-05
+Czas przeszukania tablicy o 100 liczbie elementow i 10l. bucketow trwalo6e-07
+Zapisywanie 1000 elementow do tablicy o rozmiarze 10 trwalo 0.0020768
+Czas przeszukania tablicy o 1000 liczbie elementow i 10l. bucketow trwalo1.3e-06
+Zapisywanie 10000 elementow do tablicy o rozmiarze 10 trwalo 0.276697
+Czas przeszukania tablicy o 10000 liczbie elementow i 10l. bucketow trwalo4.5e-06
+Zapisywanie 100000 elementow do tablicy o rozmiarze 10 trwalo 23.4316
+Czas przeszukania tablicy o 100000 liczbie elementow i 10l. bucketow trwalo4.8e-06
