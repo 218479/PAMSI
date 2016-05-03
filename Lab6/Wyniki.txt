@@ -1,144 +1,144 @@
-Czas trwania zapisania: 8e-06
-Czas szukania :1e-06
-Czas trwania zapisania: 2e-06
-Czas szukania :1e-06
-Czas trwania zapisania: 2e-06
-Czas szukania :1e-06
-Czas trwania zapisania: 2e-06
-Czas szukania :0
-Czas trwania zapisania: 2e-06
-Czas szukania :1e-06
-Czas trwania zapisania: 1e-06
-Czas szukania :0
-Czas trwania zapisania: 2e-06
-Czas szukania :0
-Czas trwania zapisania: 2e-06
-Czas szukania :1e-06
-Czas trwania zapisania: 2e-06
-Czas szukania :1e-06
-Czas trwania zapisania: 1e-06
-Czas szukania :1e-06
+Czas trwania zapisania: 1.6e-05
+Czas szukania :3e-06
+Czas trwania zapisania: 5e-06
+Czas szukania :2e-06
+Czas trwania zapisania: 5e-06
+Czas szukania :3e-06
+Czas trwania zapisania: 4e-06
+Czas szukania :2e-06
+Czas trwania zapisania: 5e-06
+Czas szukania :2e-06
+Czas trwania zapisania: 5e-06
+Czas szukania :2e-06
+Czas trwania zapisania: 4e-06
+Czas szukania :2e-06
+Czas trwania zapisania: 5e-06
+Czas szukania :2e-06
+Czas trwania zapisania: 4e-06
+Czas szukania :2e-06
+Czas trwania zapisania: 5e-06
+Czas szukania :2e-06
 
-Sredni czas wpisywania 10 elementow: 2.4e-06
-Sredni czas szukania 7e-07
+Sredni czas wpisywania 10 elementow: 5.8e-06
+Sredni czas szukania 2.2e-06
 
-Czas trwania zapisania: 2.9e-05
+Czas trwania zapisania: 6.2e-05
 Czas szukania :1e-05
-Czas trwania zapisania: 2.3e-05
+Czas trwania zapisania: 2e-05
+Czas szukania :1e-05
+Czas trwania zapisania: 5.5e-05
+Czas szukania :3.1e-05
+Czas trwania zapisania: 1.9e-05
 Czas szukania :9e-06
-Czas trwania zapisania: 2.3e-05
-Czas szukania :9e-06
-Czas trwania zapisania: 2.2e-05
-Czas szukania :9e-06
-Czas trwania zapisania: 2.3e-05
+Czas trwania zapisania: 2.1e-05
 Czas szukania :9e-06
 Czas trwania zapisania: 1.9e-05
-Czas szukania :8e-06
-Czas trwania zapisania: 2e-05
 Czas szukania :9e-06
-Czas trwania zapisania: 2.2e-05
+Czas trwania zapisania: 2.1e-05
 Czas szukania :1e-05
-Czas trwania zapisania: 2.3e-05
-Czas szukania :1e-05
-Czas trwania zapisania: 2.2e-05
+Czas trwania zapisania: 1.8e-05
+Czas szukania :9e-06
+Czas trwania zapisania: 1.9e-05
+Czas szukania :9e-06
+Czas trwania zapisania: 1.8e-05
 Czas szukania :8e-06
 
-Sredni czas wpisywania 100 elementow: 2.26e-05
-Sredni czas szukania 9.1e-06
+Sredni czas wpisywania 100 elementow: 2.72e-05
+Sredni czas szukania 1.14e-05
 
-Czas trwania zapisania: 0.000335
-Czas szukania :0.000127
-Czas trwania zapisania: 0.00039
-Czas szukania :0.000314
-Czas trwania zapisania: 0.00063
-Czas szukania :0.000346
-Czas trwania zapisania: 0.000626
-Czas szukania :0.000289
-Czas trwania zapisania: 0.000635
-Czas szukania :0.000332
-Czas trwania zapisania: 0.000639
-Czas szukania :0.000337
-Czas trwania zapisania: 0.000605
-Czas szukania :0.000341
-Czas trwania zapisania: 0.000236
-Czas szukania :9.4e-05
-Czas trwania zapisania: 0.000176
-Czas szukania :9.2e-05
-Czas trwania zapisania: 0.000173
-Czas szukania :9.2e-05
+Czas trwania zapisania: 0.00034
+Czas szukania :0.00036
+Czas trwania zapisania: 0.000674
+Czas szukania :0.00035
+Czas trwania zapisania: 0.000638
+Czas szukania :0.000351
+Czas trwania zapisania: 0.000646
+Czas szukania :0.000349
+Czas trwania zapisania: 0.000663
+Czas szukania :0.000235
+Czas trwania zapisania: 0.00046
+Czas szukania :0.000241
+Czas trwania zapisania: 0.000427
+Czas szukania :0.000232
+Czas trwania zapisania: 0.000425
+Czas szukania :0.000234
+Czas trwania zapisania: 0.000421
+Czas szukania :0.000233
+Czas trwania zapisania: 0.000377
+Czas szukania :9.1e-05
 
-Sredni czas wpisywania 1000 elementow: 0.0004445
-Sredni czas szukania 0.0002364
+Sredni czas wpisywania 1000 elementow: 0.0005071
+Sredni czas szukania 0.0002676
 
-Czas trwania zapisania: 0.002524
-Czas szukania :0.001358
-Czas trwania zapisania: 0.002529
-Czas szukania :0.001517
-Czas trwania zapisania: 0.002484
-Czas szukania :0.001693
-Czas trwania zapisania: 0.002401
-Czas szukania :0.001451
-Czas trwania zapisania: 0.002337
-Czas szukania :0.001675
-Czas trwania zapisania: 0.002411
-Czas szukania :0.00151
-Czas trwania zapisania: 0.002416
-Czas szukania :0.001509
-Czas trwania zapisania: 0.002256
+Czas trwania zapisania: 0.002322
+Czas szukania :0.001434
+Czas trwania zapisania: 0.002132
 Czas szukania :0.001431
-Czas trwania zapisania: 0.002326
-Czas szukania :0.002047
-Czas trwania zapisania: 0.003086
-Czas szukania :0.001531
+Czas trwania zapisania: 0.002259
+Czas szukania :0.001366
+Czas trwania zapisania: 0.002134
+Czas szukania :0.001362
+Czas trwania zapisania: 0.002176
+Czas szukania :0.001372
+Czas trwania zapisania: 0.002126
+Czas szukania :0.00136
+Czas trwania zapisania: 0.002174
+Czas szukania :0.001374
+Czas trwania zapisania: 0.002147
+Czas szukania :0.001383
+Czas trwania zapisania: 0.00216
+Czas szukania :0.001373
+Czas trwania zapisania: 0.002148
+Czas szukania :0.001353
 
-Sredni czas wpisywania 10000 elementow: 0.002477
-Sredni czas szukania 0.0015722
+Sredni czas wpisywania 10000 elementow: 0.0021778
+Sredni czas szukania 0.0013808
 
-Czas trwania zapisania: 0.042353
-Czas szukania :0.029302
-Czas trwania zapisania: 0.048708
-Czas szukania :0.037336
-Czas trwania zapisania: 0.048571
-Czas szukania :0.038149
-Czas trwania zapisania: 0.049264
-Czas szukania :0.038809
-Czas trwania zapisania: 0.048816
-Czas szukania :0.03818
-Czas trwania zapisania: 0.04798
-Czas szukania :0.038698
-Czas trwania zapisania: 0.048588
-Czas szukania :0.037451
-Czas trwania zapisania: 0.049029
-Czas szukania :0.038426
-Czas trwania zapisania: 0.051402
-Czas szukania :0.038411
-Czas trwania zapisania: 0.048208
-Czas szukania :0.037187
+Czas trwania zapisania: 0.036074
+Czas szukania :0.027591
+Czas trwania zapisania: 0.033424
+Czas szukania :0.02741
+Czas trwania zapisania: 0.033256
+Czas szukania :0.027679
+Czas trwania zapisania: 0.03565
+Czas szukania :0.027377
+Czas trwania zapisania: 0.033568
+Czas szukania :0.029892
+Czas trwania zapisania: 0.033462
+Czas szukania :0.027472
+Czas trwania zapisania: 0.033237
+Czas szukania :0.027391
+Czas trwania zapisania: 0.034198
+Czas szukania :0.027398
+Czas trwania zapisania: 0.033166
+Czas szukania :0.027667
+Czas trwania zapisania: 0.033273
+Czas szukania :0.027366
 
-Sredni czas wpisywania 100000 elementow: 0.0482919
-Sredni czas szukania 0.0371949
+Sredni czas wpisywania 100000 elementow: 0.0339308
+Sredni czas szukania 0.0277243
 
-Czas trwania zapisania: 0.825283
-Czas szukania :0.684983
-Czas trwania zapisania: 1.065
-Czas szukania :0.921082
-Czas trwania zapisania: 1.11489
-Czas szukania :0.873598
-Czas trwania zapisania: 1.03021
-Czas szukania :0.905049
-Czas trwania zapisania: 1.0403
-Czas szukania :0.828943
-Czas trwania zapisania: 0.988911
-Czas szukania :0.87891
-Czas trwania zapisania: 1.01657
-Czas szukania :0.875486
-Czas trwania zapisania: 1.02068
-Czas szukania :0.858548
-Czas trwania zapisania: 1.03434
-Czas szukania :0.866117
-Czas trwania zapisania: 1.01489
-Czas szukania :0.927391
+Czas trwania zapisania: 0.805541
+Czas szukania :0.676105
+Czas trwania zapisania: 0.773678
+Czas szukania :0.671864
+Czas trwania zapisania: 0.789898
+Czas szukania :0.67545
+Czas trwania zapisania: 0.801555
+Czas szukania :0.674421
+Czas trwania zapisania: 0.803273
+Czas szukania :0.687583
+Czas trwania zapisania: 0.797493
+Czas szukania :0.676809
+Czas trwania zapisania: 0.795692
+Czas szukania :0.672655
+Czas trwania zapisania: 0.794368
+Czas szukania :0.672945
+Czas trwania zapisania: 0.792782
+Czas szukania :0.672039
+Czas trwania zapisania: 0.79354
+Czas szukania :0.670892
 
-Sredni czas wpisywania 1000000 elementow: 1.01511
-Sredni czas szukania 0.862011
+Sredni czas wpisywania 1000000 elementow: 0.794782
+Sredni czas szukania 0.675076
 

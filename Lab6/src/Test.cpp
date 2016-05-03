@@ -14,6 +14,7 @@ void Test::wykonaj(int x)
     for(int i=0; i<10; i++)
     {
         Nowy=new Drzewo;
+        szukane=new int [x];
         Czas_wpisywania.Wlacz();
         for(int i=0; i<x; i++)
         {
@@ -36,6 +37,8 @@ void Test::wykonaj(int x)
         cout<<"Czas szukania :"<<Czas_szukania.get_trwanie()<<endl;
         Czas_szukania.Zliczaj_do_sumy();
         Nowy->reset();
+        delete [] szukane;
+
     }
 
     cout<<"\nSredni czas wpisywania "<<x<<" elementow: "<<Czas_wpisywania.get_suma()/10<<endl;
