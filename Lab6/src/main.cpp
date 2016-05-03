@@ -2,21 +2,18 @@
 #include "Drzewo_Czerwono_Czarne.hh"
 #include <cstdlib>
 #include "stoper.hh"
+#include "Test.hh"
 
 using namespace std;
 
 int main()
 {
-    stoper Czas;
-    Drzewo Test;
-    srand(time(NULL));
-    int x=0;
-    for(int i=0; i<1000; i++)
-    {
-        x=rand()%1000;
-        cout<<x<<endl;
-        Test.wstaw(x);
-    }
-    //Test.wyswietl();
+    int rozmiar[6]= {10,100,1000,10000,100000,1000000};
+    Test Drzewo_testowe;
+
+    for(int i=0;i<6;i++)
+    Drzewo_testowe.wykonaj(rozmiar[i]);
+
+
     return 0;
 }

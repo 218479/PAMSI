@@ -2,6 +2,7 @@
 #define TEST_HH
 #include "Drzewo_Czerwono_Czarne.hh"
 #include "stoper.hh"
+#include <cstdlib>
 
 class Test
 {
@@ -9,7 +10,7 @@ private:
 
 public:
     void przygotuj();
-    void wykonaj();
+    void wykonaj(int x);
 
 };
 

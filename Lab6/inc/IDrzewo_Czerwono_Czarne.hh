@@ -9,13 +9,6 @@ struct Wezel
     Wezel* lewy;
     Wezel* prawy;
     Wezel* rodzic;
-    Wezel(int x)
-    {
-        wartosc=x;
-        lewy=NULL;
-        prawy=NULL;
-        rodzic=NULL;
-    }
 
 };
 class IDrzewo_czerwono_czarne
@@ -28,7 +21,7 @@ public:
     virtual void wypisz(Wezel *x)=0;
     virtual void wyswietl()=0;
     virtual int znajdz(int x)=0;
- //   virtual void usun(Wezel *x)=0;
+    virtual void usun(Wezel *x)=0;
 };
 
 #endif // IDRZEWO_CZERWONO_CZARNE_HH

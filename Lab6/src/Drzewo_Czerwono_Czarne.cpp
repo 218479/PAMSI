@@ -3,163 +3,150 @@
 
 void Drzewo::obroc_w_lewo(Wezel *x)
 {
-    Wezel*p,*q;
-    p=x->prawy;
-    if(p!=NULL)
+    Wezel *a, *b;
+
+    a = x->prawy;
+    if(a !=&lisc)
     {
-        q=x->rodzic;
-        x->prawy=p->lewy;
-        if(p->prawy!=NULL)
+        b = x->rodzic;
+        x->prawy = a->lewy;
+        if(x->prawy != &lisc)
         {
-            p->prawy->rodzic=x;
+            x->prawy->rodzic = x;
         }
-        p->lewy=x;
-        p->rodzic=q;
-        x->rodzic=p;
-        if(q!=NULL)
+        a->lewy = x;
+        a->rodzic = b;
+        x->rodzic = a;
+
+        if(b != &lisc)
         {
-            if(q->lewy==x)
+            if(b->lewy == x)
             {
-                q->lewy=p;
+                b->lewy = a;
             }
-            else
-                q->prawy=p;
+            else b->prawy = a;
         }
-        else korzen=p;
+        else korzen = a;
     }
 }
 void Drzewo::obroc_w_prawo(Wezel *x)
 {
-    Wezel * p, * q;
-    p = x->lewy;
-    if(p != NULL)
+    Wezel *a, *b;
+
+    a = x->lewy;
+    if(a !=&lisc)
     {
-        q = x->rodzic;
-        x->lewy = p->prawy;
-        if(x->lewy !=NULL) x->lewy->rodzic = x;
-
-        p->prawy =x;
-        p->rodzic = q;
-        x->rodzic = p;
-
-        if(q != NULL)
+        b = x->rodzic;
+        x->lewy = a->prawy;
+        if(x->lewy != &lisc)
         {
-            if(q->lewy == x) q->lewy = p;
-            else q->prawy = p;
+            x->lewy->rodzic = x;
         }
-        else korzen = p;
-    }
+        a->prawy = x;
+        a->rodzic = b;
+        x->rodzic = a;
 
+        if(b != &lisc)
+        {
+            if(b->lewy == x)
+            {
+                b->lewy = a;
+            }
+            else b->prawy = a;
+        }
+        else korzen = a;
+    }
 }
 void Drzewo::wstaw(int x)
 {
-    Wezel *tmp, *wujek;
-    Wezel *nowy=new Wezel(x);
-    if(korzen==NULL)
+    Wezel *wujek;
+    Wezel *nowy=new Wezel;
+    nowy->rodzic=korzen;
+    nowy->lewy=&lisc;
+    nowy->prawy=&lisc;
+    nowy->wartosc=x;
+    if(nowy->rodzic==&lisc)
     {
-        cout<<"DODANO KORZEN"<<endl;
         korzen=nowy;
         korzen->kolor=0;
-        korzen->rodzic=NULL;
     }
     else
     {
-        nowy->lewy=NULL;
-        nowy->prawy=NULL;
-        tmp=korzen;
         while(1)
         {
-           // cout<<"cos8"<<endl;
-            if(tmp->wartosc>x)
+            if(nowy->rodzic->wartosc>x)
             {
-                if(tmp->lewy==NULL)
+                if(nowy->rodzic->lewy==&lisc)
                 {
-                    tmp->lewy=nowy;
+                    nowy->rodzic->lewy=nowy;
                     nowy->kolor=1;
-                    nowy->rodzic=tmp;
                     break;
                 }
-                else{
-                tmp=tmp->lewy;
-             //   cout<<"cos9"<<endl;
-             }
+                nowy->rodzic=nowy->rodzic->lewy;
             }
             else
             {
-                if(tmp->prawy==NULL)
+                if(nowy->rodzic->prawy==&lisc)
                 {
-                    tmp->prawy=nowy;
+                    nowy->rodzic->prawy=nowy;
                     nowy->kolor=1;
-                    nowy->rodzic=tmp;
                     break;
                 }
-                else{
-                tmp=tmp->prawy;
-            //    cout<<"cos10"<<endl;
-             }
+                nowy->rodzic=nowy->rodzic->prawy;
             }
         }
     }
-    tmp=nowy;
-    while(tmp->rodzic!=NULL&&tmp->rodzic->kolor==1)
+    while(nowy!=korzen&&nowy->rodzic->kolor==1)
     {
-      //  cout<<"cos"<<endl;
-        if(tmp->rodzic==tmp->rodzic->rodzic->lewy)
+        if(nowy->rodzic==nowy->rodzic->rodzic->lewy)
         {
-            wujek=tmp->rodzic->rodzic->prawy;
-            if(wujek!=NULL&&wujek->kolor==1)
+            wujek=nowy->rodzic->rodzic->prawy;
+            if(wujek->kolor==1)
             {
-         //       cout<<"cos1"<<endl;
-                tmp->rodzic->kolor=0;
+                nowy->rodzic->kolor=0;
                 wujek->kolor=0;
-                tmp=tmp->rodzic->rodzic;
-                tmp->kolor=1;
+                nowy->rodzic->rodzic->kolor=1;
+                nowy=nowy->rodzic->rodzic;
                 continue;
             }
-            if((tmp==tmp->rodzic->prawy)&&(wujek!=NULL)&&(wujek->kolor==0))
+            if(nowy==nowy->rodzic->prawy)
             {
-                tmp=tmp->rodzic;
-                obroc_w_lewo(tmp);
-         //       cout<<"cos2"<<endl;
+                nowy=nowy->rodzic;
+                obroc_w_lewo(nowy);
             }
-            tmp->rodzic->kolor=0;
-            tmp->rodzic->rodzic->kolor=1;
-            obroc_w_prawo(tmp->rodzic);
-         //   cout<<"cos3"<<endl;
+            nowy->rodzic->kolor=0;
+            nowy->rodzic->rodzic->kolor=1;
+            obroc_w_prawo(nowy->rodzic->rodzic);
             break;
         }
         else
         {
-            wujek=tmp->rodzic->rodzic->lewy;
-            if(wujek!=NULL&&wujek->kolor==1)
+            wujek=nowy->rodzic->rodzic->lewy;
+            if(wujek->kolor==1)
             {
-          //      cout<<"cos4"<<endl;
-                tmp->rodzic->kolor=0;
+                nowy->rodzic->kolor=0;
                 wujek->kolor=0;
-                tmp=tmp->rodzic->rodzic;
-                tmp->kolor=1;
+                nowy->rodzic->rodzic->kolor=1;
+                nowy=nowy->rodzic->rodzic;
                 continue;
             }
-            if((tmp==tmp->rodzic->lewy)&&(wujek!=NULL)&&(wujek->kolor==0))
+            if(nowy==nowy->rodzic->lewy)
             {
-                tmp=tmp->rodzic;
-                obroc_w_prawo(tmp);
-           //     cout<<"cos5"<<endl;
+                nowy=nowy->rodzic;
+                obroc_w_prawo(nowy);
             }
-            tmp->rodzic->kolor=0;
-            tmp->rodzic->rodzic->kolor=1;
-            obroc_w_lewo(tmp->rodzic);
-         //   cout<<"cos6"<<endl;
+            nowy->rodzic->kolor=0;
+            nowy->rodzic->rodzic->kolor=1;
+            obroc_w_lewo(nowy->rodzic->rodzic);
             break;
         }
     }
-   // cout<<"cos7"<<endl;
     korzen->kolor=0;
 }
 
 void Drzewo::wypisz(Wezel *x)
 {
-    if (x != NULL)
+    if (x != &lisc)
     {
         wypisz (x->lewy);
         wypisz (x-> prawy);
@@ -171,38 +158,46 @@ void Drzewo::wypisz(Wezel *x)
 void Drzewo::wyswietl()
 {
     wypisz(korzen);
-    /*  cout<<korzen->wartosc<<endl;
-      cout<<korzen->lewy->wartosc<<endl;
-      cout<<korzen->prawy->wartosc<<endl;*/
 }
 int Drzewo::znajdz(int x)
 {
     int z=0;
     Wezel *tmp;
     tmp=korzen;
-    while(tmp!=NULL)
+    while(tmp!=&lisc)
     {
         z++;
-        if(x==tmp->wartosc)
+        if(tmp->wartosc>x)
         {
-            cout<<"Znaleziono element, po przejsciu "<<z<<" wezlow"<<endl;
-            return x;
+            tmp=tmp->lewy;
         }
-        else if(x>tmp->wartosc)
+        else if(tmp->wartosc<x)
         {
             tmp=tmp->prawy;
         }
         else
-            tmp=tmp->lewy;
+        {
+            return x;
+        }
     }
-    cout<<"Nie znaleziono elementu"<<endl;
+    return NULL;
 }
-/*void Drzewo::usun(Wezel *x)
+void Drzewo::usun(Wezel *x)
 {
-    if(x!=NULL)
+    if(x!=&lisc)
     {
         usun(x->prawy);
         usun(x->lewy);
         delete x;
     }
-}*/
+}
+void Drzewo::reset()
+{
+    usun(korzen);
+    lisc.kolor=0;
+    lisc.rodzic=&lisc;
+    lisc.prawy=&lisc;
+    lisc.lewy=&lisc;
+    korzen=&lisc;
+
+}
