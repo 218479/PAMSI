@@ -2,10 +2,10 @@
 #define GRAF_HH
 #include "Lista.hh"
 #include "Kolejka.hh"
-
+#include "IGraf.hh"
 using namespace std;
 
-class Graf
+class Graf: public IGraf
 {
 private:
 
@@ -24,13 +24,13 @@ public:
             odwiedzone[i]=false;
         }
     }
-    void DodajWierzcholek(int x);
-    void ZrobPolaczenie(int pierwszy, int drugi);
-    bool CzyPolaczone(int pierwszy, int drugi);
-    void GetSasiadow(int x);
-    void DFS_odwiedzaj(int x);
-    void DFS();
-    void BFS(int x);
+    virtual void DodajWierzcholek(int x);
+    virtual void ZrobPolaczenie(int pierwszy, int drugi);
+    virtual bool CzyPolaczone(int pierwszy, int drugi);
+    virtual Lista GetSasiadow(int x);
+    virtual void DFS_odwiedzaj(int x);
+    virtual void DFS();
+    void BFS();
 };
 
 #endif // GRAF_HH

@@ -1,0 +1,12 @@
+Czas przejscia grafu 10 elementowego trwal dla DFS: 4.05e-06
+Czas przejscia grafu 10 elementowego trwal dla BFS: 5e-06
+Czas przejscia grafu 100 elementowego trwal dla DFS: 1.465e-05
+Czas przejscia grafu 100 elementowego trwal dla BFS: 1.565e-05
+Czas przejscia grafu 1000 elementowego trwal dla DFS: 0.0001367
+Czas przejscia grafu 1000 elementowego trwal dla BFS: 0.00015935
+Czas przejscia grafu 10000 elementowego trwal dla DFS: 0.0008528
+Czas przejscia grafu 10000 elementowego trwal dla BFS: 0.00093895
+Czas przejscia grafu 100000 elementowego trwal dla DFS: 0.01272
+Czas przejscia grafu 100000 elementowego trwal dla BFS: 0.00969055
+Czas przejscia grafu 1000000 elementowego trwal dla DFS: 0.133909
+Czas przejscia grafu 1000000 elementowego trwal dla BFS: 0.100437

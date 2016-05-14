@@ -54,20 +54,16 @@ bool Graf::CzyPolaczone(int pierwszy, int drugi)
         }
     }
 }
-void Graf::GetSasiadow(int x)
+Lista Graf::GetSasiadow(int x)
 {
-    for(int i=0; i<Wierzcholki[x].get_size(); i++)
-    {
-
-    }
-
+    return Wierzcholki[x];
 }
 
 void Graf::DFS_odwiedzaj(int x)
 {
     odwiedzone[x]=true;
     int a=0;
-    cout<<"ODWIEDZONO "<<x<<" ";
+    //cout<<"ODWIEDZONO "<<x<<" ";
     for(int i=0; i<Wierzcholki[x].get_size(); i++)
     {
         a=Wierzcholki[x].get(i);
@@ -94,30 +90,26 @@ void Graf::DFS()
 
 }
 
-void Graf::BFS(int x)
+void Graf::BFS()
 {
-    Kolejka nowa;
+    Lista nowa;
+    int x=0;
     for(int i=0; i<Liczba_Wierzcholkow; i++)
     {
         odwiedzone[i]=false;
     }
     for(int i=0; i<Liczba_Wierzcholkow; i++)
     {
-        nowa.push(i);
-    }
-    while(nowa.Rozmiar()!=0)
-    {
-        x=nowa.pop();
-
-        cout<<"ODWIEDZONO "<<x<<" ";
-     //   int a;
-        for(int i=0; i<Wierzcholki[x].get_size(); i++)
+        nowa=GetSasiadow(i);
+        while(nowa.get_size()!=0)
         {
+            x=nowa.get(0);
+            nowa.usun(0);
             if(odwiedzone[x]==false)
             {
-                nowa.push(x);
+            //    cout<<"Odwiedzono"<<x<<" ";
+                odwiedzone[x]=true;
             }
         }
-        odwiedzone[x]=true;
     }
 }
