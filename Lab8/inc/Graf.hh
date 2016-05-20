@@ -17,34 +17,35 @@ public:
     Graf(int x)
     {
         Liczba_Wierzcholkow=x;
-        Wierzcholki=new int [x];
-        for(int i=0;i<Liczba_Wierzcholkow;i++)
+        Wierzcholki=new int* [x];
+
+        for(int i=0; i<Liczba_Wierzcholkow; i++)
         {
             Wierzcholki[i]=new int[x];
         }
-        for(int i=0;i<Liczba_Wierzcholkow;i++)
+
+        for(int i=0; i<Liczba_Wierzcholkow; i++)
         {
-            for(int j=0;j<Liczba_Wierzcholkow;j++)
+            for(int j=0; j<Liczba_Wierzcholkow; j++)
             {
                 Wierzcholki[i][j]=0;
             }
         }
-        for(int i=0;i<Liczba_Wierzcholkow;i++)
+
+        for(int i=0; i<Liczba_Wierzcholkow; i++)
         {
-                Wierzcholki[i][i]=-1;
+            odwiedzone[i]=false;
         }
-        for(int i=0;i<Liczba_Wierzcholkow;i++)
-        {
-            odwiedzone=false;
-        }
+
     }
+
     virtual void DodajWierzcholek(int x);
-    virtual void ZrobPolaczenie(int pierwszy, int drugi);
+    virtual void ZrobPolaczenie(int pierwszy, int drugi, int waga);
     virtual bool CzyPolaczone(int pierwszy, int drugi);
     virtual Lista GetSasiadow(int x);
-    virtual void DFS_odwiedzaj(int x);
-    virtual void DFS();
-    void BFS();
+  //  virtual void DFS_odwiedzaj(int x);
+  //  virtual void DFS();
+  //   void BFS();
 };
 
 #endif // GRAF_HH

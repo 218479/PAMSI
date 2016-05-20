@@ -3,7 +3,7 @@
 void Graf::DodajWierzcholek(int x)
 {
     Liczba_Wierzcholkow+=1;
-    int **tmp=new int [Liczba_Wierzcholkow];
+    int **tmp=new int* [Liczba_Wierzcholkow];
 
 
     for(int i=0;i<Liczba_Wierzcholkow;i++)
@@ -19,9 +19,9 @@ void Graf::DodajWierzcholek(int x)
         tmp[i][j]=Wierzcholki[i][j];
         }
     }
-    Wierzcholki[Liczba_Wierzcholkow][Liczba_Wierzcholkow]=-1;
+    Wierzcholki[Liczba_Wierzcholkow][Liczba_Wierzcholkow]=0;
 
-    for(int i=0;i<Liczba_Wierzcholkowi;i++)
+    for(int i=0;i<Liczba_Wierzcholkow;i++)
     {
         delete [] tmp[i];
     }
@@ -64,10 +64,18 @@ bool Graf::CzyPolaczone(int pierwszy, int drugi)
 }
 Lista Graf::GetSasiadow(int x)
 {
-    Wierzcholki(x)
+    Lista Nowa;
+    for(int i=0;i<Liczba_Wierzcholkow;i++)
+    {
+        if(Wierzcholki[x][i]!=0)
+        {
+            Nowa.dodaj(i,0);
+        }
+    }
+    return Nowa;
 }
 
-void Graf::DFS_odwiedzaj(int x)
+/*void Graf::DFS_odwiedzaj(int x)
 {
     odwiedzone[x]=true;
     int a=0;
@@ -121,3 +129,5 @@ void Graf::BFS()
         }
     }
 }
+*/
+
