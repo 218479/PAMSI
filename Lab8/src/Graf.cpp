@@ -1,32 +1,30 @@
 #include "Graf.hh"
 
+
+bool operator<(Branch a, Branch b)
+{
+    return a.koszt > b.koszt;
+}
+
 void Graf::DodajWierzcholek(int x)
 {
-    Liczba_Wierzcholkow+=1;
-    int **tmp=new int* [Liczba_Wierzcholkow];
+    Liczba_Wierzcholkow+=x;
+    Lista *tmp=new Lista[Liczba_Wierzcholkow];
 
-
-    for(int i=0;i<Liczba_Wierzcholkow;i++)
+    for(int i=0; i<Liczba_Wierzcholkow; i++)
     {
-        tmp[i]=new int [Liczba_Wierzcholkow];
+        tmp[i]=Wierzcholki[i];
     }
 
+    delete [] Wierzcholki ;
+    Wierzcholki=new Lista[Liczba_Wierzcholkow];
 
-    for(int i=0;i<Liczba_Wierzcholkow-1;i++)
+    for(int i=0; i<Liczba_Wierzcholkow; i++)
     {
-        for(int j=0;j<Liczba_Wierzcholkow-1;j++)
-        {
-        tmp[i][j]=Wierzcholki[i][j];
-        }
+        Wierzcholki[i]=tmp[i];
     }
-    Wierzcholki[Liczba_Wierzcholkow][Liczba_Wierzcholkow]=0;
 
-    for(int i=0;i<Liczba_Wierzcholkow;i++)
-    {
-        delete [] tmp[i];
-    }
     delete [] tmp;
-
 }
 void Graf::ZrobPolaczenie(int pierwszy, int drugi, int waga)
 {
@@ -37,9 +35,11 @@ void Graf::ZrobPolaczenie(int pierwszy, int drugi, int waga)
     }
     else
     {
-        Wierzcholki[pierwszy][drugi]=waga;
-        Wierzcholki[drugi][pierwszy]=waga;
+        Wierzcholki[pierwszy].dodaj(drugi,Wierzcholki[pierwszy].get_size());
+        Wierzcholki[drugi].dodaj(pierwszy,Wierzcholki[drugi].get_size());
     }
+    waga_krawedzi[pierwszy][drugi]=waga;
+    waga_krawedzi[drugi][pierwszy]=waga;
 }
 bool Graf::CzyPolaczone(int pierwszy, int drugi)
 {
@@ -50,9 +50,9 @@ bool Graf::CzyPolaczone(int pierwszy, int drugi)
     }
     else
     {
-        if(Wierzcholki[pierwszy][drugi]!=0)
+        if(Wierzcholki[pierwszy].przeszukaj(drugi))
         {
-            cout<<"SA POLACZONE!"<<endl;
+            cout<<"SA POLACZONE, A WAGA TO: "<<waga_krawedzi[pierwszy][drugi]<<" A TAKZE "<<waga_krawedzi[drugi][pierwszy]<<endl;
             return true;
         }
         else
@@ -64,18 +64,10 @@ bool Graf::CzyPolaczone(int pierwszy, int drugi)
 }
 Lista Graf::GetSasiadow(int x)
 {
-    Lista Nowa;
-    for(int i=0;i<Liczba_Wierzcholkow;i++)
-    {
-        if(Wierzcholki[x][i]!=0)
-        {
-            Nowa.dodaj(i,0);
-        }
-    }
-    return Nowa;
+    return Wierzcholki[x];
 }
 
-/*void Graf::DFS_odwiedzaj(int x)
+void Graf::DFS_odwiedzaj(int x)
 {
     odwiedzone[x]=true;
     int a=0;
@@ -123,11 +115,132 @@ void Graf::BFS()
             nowa.usun(0);
             if(odwiedzone[x]==false)
             {
-            //    cout<<"Odwiedzono"<<x<<" ";
+                //    cout<<"Odwiedzono"<<x<<" ";
                 odwiedzone[x]=true;
             }
         }
     }
 }
-*/
 
+int Graf::GetWagaKrawedzi(int pierwszy, int drugi)
+{
+    return waga_krawedzi[pierwszy][drugi];
+}
+
+int Graf::BranchAndBound(int szukany)
+{
+    priority_queue<Branch> Kolejka_;
+    int wynik=INT_MAX;     //To zmienic pozniej
+    Lista Nowa;
+    Nowa.dodaj(0,0);
+    Branch tmp(Nowa,0,0);
+    Kolejka_.push(tmp);
+
+
+    while(!Kolejka_.empty())
+    {
+        tmp=Kolejka_.top();
+        Kolejka_.pop();
+
+    //    cout << "Wierzcholek " << tmp.wierzcholek << " - " << tmp.koszt << endl;
+
+    //    cout << "ma " << Wierzcholki[tmp.wierzcholek].get_size() << " sasiadow." << endl;
+
+        for(int i=0; i<Wierzcholki[tmp.wierzcholek].get_size(); i++)
+        {
+            int D=Wierzcholki[tmp.wierzcholek].get(i);
+
+     //       cout << "Sasiad wierzcholka " << tmp.wierzcholek << " " << D << endl;
+
+            if(!tmp.lista.przeszukaj(D))
+            {
+       //         cout << "Nie ma wierzholka na liscie" << endl;
+                if(D==szukany)
+                {
+                    if(tmp.koszt+waga_krawedzi[tmp.wierzcholek][D]<wynik)
+                    {
+                        wynik=tmp.koszt+waga_krawedzi[tmp.wierzcholek][D];
+                    }
+                }
+                else
+                {
+                    if(tmp.koszt+waga_krawedzi[tmp.wierzcholek][D]<wynik)
+                    {
+                        Lista L=tmp.lista.kopiuj();
+                        L.dodaj(D,L.get_size());
+                        Branch B(L,D,tmp.koszt+waga_krawedzi[tmp.wierzcholek][D]);
+                        Kolejka_.push(B);
+
+                    }
+                }
+            }
+        }
+    }
+    return wynik;
+}
+int Graf::BranchAndBoundWithExtendedList(int szukany)
+{
+
+    priority_queue<Branch> Kolejka_;
+    int Tablica_wierzcholkow_odwiedzonych[Liczba_Wierzcholkow];
+    for(int i=0; i<Liczba_Wierzcholkow; i++)
+    {
+        Tablica_wierzcholkow_odwiedzonych[i]=0;
+    }
+    int wynik=INT_MAX;     //To zmienic pozniej
+    Lista Nowa;
+    Nowa.dodaj(0,0);
+    Branch tmp(Nowa,0,0);
+    Kolejka_.push(tmp);
+
+
+    while(!Kolejka_.empty())
+    {
+        tmp=Kolejka_.top();
+        Kolejka_.pop();
+
+     //   cout << "Wierzcholek " << tmp.wierzcholek << " - " << tmp.koszt << endl;
+
+     //   cout << "ma " << Wierzcholki[tmp.wierzcholek].get_size() << " sasiadow." << endl;
+        if(Tablica_wierzcholkow_odwiedzonych[tmp.wierzcholek]==0)
+        {
+            Tablica_wierzcholkow_odwiedzonych[tmp.wierzcholek]=1;
+
+            for(int i=0; i<Wierzcholki[tmp.wierzcholek].get_size(); i++)
+            {
+                int D=Wierzcholki[tmp.wierzcholek].get(i);
+
+            //    cout << "Sasiad wierzcholka " << tmp.wierzcholek << " " << D << endl;
+
+                if(!tmp.lista.przeszukaj(D))
+                {
+              //      cout << "Nie ma wierzholka na liscie" << endl;
+                    if(D==szukany)
+                    {
+                        if(tmp.koszt+waga_krawedzi[tmp.wierzcholek][D]<wynik)
+                        {
+                            wynik=tmp.koszt+waga_krawedzi[tmp.wierzcholek][D];
+                        }
+                    }
+                    else
+                    {
+                        if(tmp.koszt+waga_krawedzi[tmp.wierzcholek][D]<wynik)
+                        {
+                            Lista L=tmp.lista.kopiuj();
+                            L.dodaj(D,L.get_size());
+                            Branch B(L,D,tmp.koszt+waga_krawedzi[tmp.wierzcholek][D]);
+                            Kolejka_.push(B);
+
+                        }
+                    }
+                }
+            }
+        }
+        else{
+
+        cout<<"JUZ BYLISMY W TYM WIERZCHOLKU";
+        }
+    }
+    return wynik;
+
+}
