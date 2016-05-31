@@ -1,0 +1,8 @@
+Czas przejscia grafu 10 elementowego trwal dla Branch&Bound: 5e-07
+Czas przejscia grafu 10 elementowego trwal dla Branch&Bound with extended list: 5e-07
+Czas przejscia grafu 100 elementowego trwal dla Branch&Bound: 6e-07
+Czas przejscia grafu 100 elementowego trwal dla Branch&Bound with extended list: 3e-07
+Czas przejscia grafu 1000 elementowego trwal dla Branch&Bound: 4e-07
+Czas przejscia grafu 1000 elementowego trwal dla Branch&Bound with extended list: 1e-07
+Czas przejscia grafu 10000 elementowego trwal dla Branch&Bound: 5e-07
+Czas przejscia grafu 10000 elementowego trwal dla Branch&Bound with extended list: 0
