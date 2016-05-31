@@ -16,13 +16,13 @@ void Test::wykonaj()
     {
         Czas_przeszukania_BB.przygotuj();
         Czas_przeszukania_BBWEL.przygotuj();
-        for(int k=0; k<10; k++)
+        for(int k=0; k<20; k++)
         {
             Nowy=new Graf(rozmiar[i]);
             for(int j=0; j<rozmiar[i]; j++)
             {
                 Nowy->ZrobPolaczenie(j,rand()%(rozmiar[i]),rand()%200);
-                Nowy->ZrobPolaczenie(rand()%(rozmiar[i]),rand()%(rozmiar[i]),rand()%200);
+                //Nowy->ZrobPolaczenie(rand()%(rozmiar[i]),rand()%(rozmiar[i]),rand()%200);
             }
      /*       for(int j=1; j<rozmiar[i]/2; j++)
             {
@@ -44,8 +44,8 @@ void Test::wykonaj()
             Czas_przeszukania_BBWEL.Zliczaj_do_sumy();
             delete Nowy;
         }
-         cout<<"Czas przejscia grafu "<<rozmiar[i]<<" elementowego trwal dla Branch&Bound: "<<Czas_przeszukania_BB.get_suma()/10<<endl;
-         cout<<"Czas przejscia grafu "<<rozmiar[i]<<" elementowego trwal dla Branch&Bound with extended list: "<<Czas_przeszukania_BBWEL.get_suma()/10<<endl;
+         cout<<"Czas przejscia grafu "<<rozmiar[i]<<" elementowego trwal dla Branch&Bound: "<<Czas_przeszukania_BB.get_suma()/20<<endl;
+         cout<<"Czas przejscia grafu "<<rozmiar[i]<<" elementowego trwal dla Branch&Bound with extended list: "<<Czas_przeszukania_BBWEL.get_suma()/20<<endl;
     }
 
 }
