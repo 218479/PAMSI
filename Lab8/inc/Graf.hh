@@ -48,6 +48,16 @@ public:
 
 
     }
+    ~Graf()
+    {
+        for(int i=0;i<Liczba_Wierzcholkow;i++)
+        {
+            delete [] waga_krawedzi[i];
+        }
+        delete [] waga_krawedzi;
+        delete [] odwiedzone;
+        delete [] Wierzcholki;
+    }
     virtual void DodajWierzcholek(int x);
     virtual void ZrobPolaczenie(int pierwszy, int drugi, int waga);
     virtual bool CzyPolaczone(int pierwszy, int drugi);

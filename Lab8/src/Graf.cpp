@@ -236,11 +236,12 @@ int Graf::BranchAndBoundWithExtendedList(int szukany)
                 }
             }
         }
-        else{
+      /*  else{
 
         cout<<"JUZ BYLISMY W TYM WIERZCHOLKU";
-        }
+        }*/
     }
+
     return wynik;
 
 }

@@ -101,7 +101,7 @@ void Lista::usun(int pozycja)
 }
 int Lista::get(int nr)
 {
-    int i=1;
+    int i=0;// int i = 1
     Element *tmp=poczatek;
     if(nr>this->get_size())
     {
@@ -133,7 +133,7 @@ int Lista::get_size()
     return i;
 }
 
-int Lista::przeszukaj(int a)
+bool Lista::przeszukaj(int a)
 {
     int x=0,y=0;
     Element *tmp=poczatek;
@@ -143,9 +143,24 @@ int Lista::przeszukaj(int a)
         if(tmp->dana==a)
         {
             x++;
-            return a;
+            return true;
         }
         tmp=tmp->nastepny;
     }
+    return false;
+}
 
+Lista Lista::kopiuj()
+{
+    Lista Kopia;
+
+    Element* tmp = poczatek;
+
+    while (tmp != NULL)
+    {
+        Kopia.dodaj(tmp->dana, Kopia.get_size());
+        tmp = tmp->nastepny;
+    }
+
+    return Kopia;
 }

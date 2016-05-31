@@ -18,7 +18,8 @@ public:
     virtual void usun(int pozycja);
     virtual int get(int nr);
     virtual int get_size();
-    virtual int przeszukaj(int a);
+    virtual bool przeszukaj(int a);
+    virtual Lista kopiuj();
 
 };
 

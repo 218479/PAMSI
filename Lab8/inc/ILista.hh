@@ -26,8 +26,7 @@ public:
     virtual void usun(int pozycja)=0;
     virtual int get(int nr)=0;
     virtual int get_size()=0;
-    virtual int przeszukaj(int a)=0;
-
+    virtual bool przeszukaj(int a)=0;
 };
 
 #endif // LISTA_HH
