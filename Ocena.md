@@ -27,3 +27,19 @@ Brak wyjaśnienia złożoności obliczeniowej dla zapisu.
 
 
 **Ocena: 4,5**
+
+## Lab7 - drzewa
+
+O(logn) != O(nlogn)
+Otrzymana złożoność nie jest zgodna z teorią.
+
+**Ocena: 4**
+
+# Lab8 - grafy (dfs,bfs)
+
+Ocena: 5
+
+# Lab9 - grafy (b&b)
+
+brak zad
+Ocena: 2
